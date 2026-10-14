@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10251e"><meta name="description" content="Find your game. Book your ground. Play together.">
+  <title>CampusPlay — Your campus, in play</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar"><a class="brand" href="#home"><span class="brand-mark">C<span>+</span></span><span>campus<span class="brand-light">play</span></span></a>
+      <div class="campus-switch"><span class="campus-icon">⌖</span><span><small>YOUR CAMPUS</small><b>Northwood University</b></span><span class="chevron">⌄</span></div>
+      <p class="nav-label">MENU</p><nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-page="home"><span>⌂</span> Overview</a><a class="nav-link" href="#playgrounds" data-page="playgrounds"><span>▦</span> Playgrounds</a><a class="nav-link" href="#bookings" data-page="bookings"><span>▣</span> My bookings</a><a class="nav-link" href="#events" data-page="events"><span>◷</span> Events <i class="nav-count">3</i></a><a class="nav-link" href="#players" data-page="players"><span>♧</span> Find players</a>
+      </nav><p class="nav-label nav-label-spaced">YOUR SPACE</p><nav class="main-nav"><a class="nav-link" href="#profile" data-page="profile"><span>◎</span> My profile</a><a class="nav-link" href="#admin" data-page="admin"><span>⚙</span> Facility admin</a></nav>
+      <div class="sidebar-bottom"><div class="invite-card"><span class="invite-icon">✳</span><b>Better together.</b><p>Bring your crew and make every game count.</p><button class="text-button" id="inviteBtn">Invite a teammate <span>↗</span></button></div><button class="user-chip" id="authBtn"><span class="avatar">JD</span><span><b id="userName">Jordan Davis</b><small id="userStatus">Student account</small></span><span class="more">···</span></button></div>
+    </aside>
+    <main class="main-content"><header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Open navigation">☰</button><div class="breadcrumb">Campus <span>/</span> <b id="crumb">Overview</b></div><div class="top-actions"><button class="icon-button" aria-label="Notifications" id="notificationBtn">♧<i></i></button><button class="help-button" id="helpBtn">? <span>Help</span></button></div></header>
+      <div id="app" aria-live="polite"></div><footer class="footer"><span>© 2025 CampusPlay</span><span>Made for the love of the game <b>♥</b></span><span><a href="#help">Help center</a>　·　<a href="#privacy">Privacy</a></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div><div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalBody"></div></section></div>
+  <script src="app.js"></script>
+</body></html>

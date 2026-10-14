@@ -1,0 +1,2 @@
+import {identity,json,safe,method,idParam} from './_shared.mjs';
+export async function handler(event){const m=method(event,'POST');if(m)return m;try{const {sb,user}=await identity(event);const {data,error}=await sb.from('bookings').update({status:'cancelled',cancelled_at:new Date().toISOString()}).eq('id',idParam(event)).eq('user_id',user.id).eq('status','confirmed').select('id').single();if(error||!data)return json(404,{error:'Booking not found or already cancelled.'});return json(200,{cancelled:true})}catch(e){return safe(e)}}

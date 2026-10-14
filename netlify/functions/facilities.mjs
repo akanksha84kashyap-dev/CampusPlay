@@ -1,0 +1,2 @@
+import {clients,json,safe,method} from './_shared.mjs';
+export async function handler(event){const m=method(event,'GET');if(m)return m;try{const {data,error}=await clients().from('facilities').select('id,name,sport,supported_sports,description,location,capacity,price_per_hour,amenities,opens_at,closes_at').eq('active',true).order('name');if(error)throw error;return json(200,{facilities:data})}catch(e){return safe(e)}}

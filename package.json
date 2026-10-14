@@ -1,0 +1,9 @@
+{
+  "name": "campusplay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "College sports discovery, booking, events and player matching platform",
+  "scripts": {"dev":"netlify dev","check":"node scripts/check.mjs"},
+  "dependencies": {"@supabase/supabase-js":"^2.49.1"},
+  "devDependencies": {"netlify-cli":"^23.1.0"}
+}
